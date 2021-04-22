@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  django:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./django:/django
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+    environment:
+      - DB_HOST=postgres
+      - DB_NAME=django
+      - DB_USER=postgres
+      - DB_PASS=supersecretpassword
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:10-alpine
+    environment:
+      - POSTGRES_DB=django
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=supersecretpassword
