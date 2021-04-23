@@ -1,7 +1,7 @@
 {% load static %}
 <html>
   <head>
-    <title>Hello World Django</title>
+    <title>{{ title }}</title>
   </head>
   <body
     style="
@@ -11,7 +11,7 @@
       align-items: center;
     "
   >
-    <h1>Hello World Django</h1>
+    <h1>{{ title }}</h1>
     <img
       src="{% static 'django-logo.png' %}"
       alt="django-logo"
