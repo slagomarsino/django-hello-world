@@ -1,5 +1,4 @@
 from rest_framework import viewsets, status
-from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -11,7 +10,6 @@ from recipe import serializers
 
 class RecipeViewSet(viewsets.ModelViewSet):
     """Manage recipes in the database"""
-    authentication_classes = (TokenAuthentication, )
     permission_classes = (IsAuthenticated, )
     queryset = Recipe.objects.all()
     serializer_class = serializers.RecipeSerializer
