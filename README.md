@@ -17,3 +17,7 @@ A basic Django 3.0 starter project.
 3. Run `docker-compose up` to start development server and services.
 4. Navigate to [http://localhost:8000](http://localhost:8000) to test.
 5. To run commands inside Docker containers, use the following command: `docker-compose run {django_project_name} python manage.py {command}`
+
+## Google Slides
+
+For more information you could follow [these Google Slides](https://slagomarsino.github.io/django-hello-world/) about some Django basic information.
