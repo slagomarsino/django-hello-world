@@ -1,4 +1,4 @@
-# Simple Django Hello World Starter Template
+# Simple Django project example
 
 A basic Django 3.0 starter project.
 
