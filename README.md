@@ -1,6 +1,6 @@
-# Simple Django project example
+# Django project example
 
-A basic Django 3.0 starter project.
+A basic Django 3.2 starter project.
 
 ## Usage with venv
 
@@ -16,7 +16,7 @@ A basic Django 3.0 starter project.
 2. Using docker-compose to manage our different services, run `docker-compose build`.
 3. Run `docker-compose up` to start development server and services.
 4. Navigate to [http://localhost:8000](http://localhost:8000) to test.
-5. To run commands inside Docker containers, use the following command: `docker-compose run {django_project_name} python manage.py {command}`
+5. To run commands inside Docker containers, use the following command: `docker-compose run {django_project_container_name} python manage.py {command}`
 
 ## Google Slides
 
