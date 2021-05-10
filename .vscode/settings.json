@@ -7,6 +7,9 @@
   "python.formatting.provider": "yapf",
   "files.insertFinalNewline": true,
   "cSpell.words": [
-    "noqa"
+    "Kubernetes",
+    "Minikube",
+    "noqa",
+    "postgres"
   ]
 }

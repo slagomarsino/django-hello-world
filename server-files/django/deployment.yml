@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-hello-world
+  labels:
+    app: django-hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: django-hello-world
+  template:
+    metadata:
+      labels:
+        app: django-hello-world
+    spec:
+      containers:
+        - name: django-hello-world
+          image: slagomarsino/django-hello-world
+          command: ["./manage.py", "runserver", "0.0.0.0:8000"]
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DB_HOST
+              value: postgres
+            - name: DB_NAME
+              value: django
+            - name: DB_USER
+              value: postgres
+            - name: DB_PASS
+              value: supersecretpassword
